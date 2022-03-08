@@ -26,11 +26,11 @@ class App extends Component {
 // 모든 컴포넌트가 마운트가 되었을 때 실행 된다.
   componentDidMount(){
     this.timer = setInterval(this.progress, 20);
-    // this.callApi()
-    //     //반환된 값을 state에 설정한다.
-    //     .then(res => this.setState({customers: res}))
-    //     // 오류가 발생했을때 출력한다.
-    //     .catch(err => console.log(err))
+    this.callApi()
+        //반환된 값을 state에 설정한다.
+        .then(res => this.setState({customers: res}))
+        // 오류가 발생했을때 출력한다.
+        .catch(err => console.log(err))
   }
 // 비동기적으로 수행한다.
   callApi = async () => {
